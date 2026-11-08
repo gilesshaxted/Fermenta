@@ -48,7 +48,7 @@ Cooler and more humid than the east, with a short growing season.
 Racha is known for a traditional style of semi-sweet red wine, made by stopping fermentation naturally in the cold of the mountains.
 
 ## Production and wine styles
-Semi-sweet reds from Aladasturi and Usakhelauri, plus some white wines.
+Khvanchkara is made from Aleksandrouli and Mujuretuli. Aladasturi and Usakhelauri make other, lighter reds, plus some white wines.
 
 ## Key wines
 - Khvanchkara
@@ -56,7 +56,7 @@ Semi-sweet reds from Aladasturi and Usakhelauri, plus some white wines.
 - Tvishi
 
 ## What to look for
-- Khvanchkara is a famous semi-sweet red.
+- Khvanchkara is a famous semi-sweet red, made from Aleksandrouli and Mujuretuli.
 - Look for Usakhelauri.
 
 ## Wines I've tried

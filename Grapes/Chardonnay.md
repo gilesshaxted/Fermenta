@@ -32,7 +32,7 @@ Burgundy, a cross between Pinot and Gouais Blanc. It is now grown in almost ever
 
 ## Where it grows
 - **Chablis and Burgundy, France:** from steely and flinty to rich Meursault
-- **Champagne, France:** the only grape in Blanc de Blancs
+- **Champagne, France:** the principal grape in Blanc de Blancs, although other permitted white varieties may be used
 - **Languedoc, France:** ripe, fruity and good value
 - **California, USA:** ripe, often oaked and buttery
 - **Adelaide Hills, Australia:** cool-climate, elegant and citrusy

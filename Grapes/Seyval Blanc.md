@@ -42,7 +42,7 @@ A French hybrid created in the 1920s, it ripens early and resists disease. It is
 - Soft cheese
 
 ## Good to know
-- Hybrid grapes are not allowed in French AOC wines.
+- Many French appellations exclude hybrid varieties, although permitted varieties depend on the individual appellation rules.
 - Fresh, light wines.
 
 ## Wines I've tried

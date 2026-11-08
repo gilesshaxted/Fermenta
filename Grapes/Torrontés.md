@@ -22,7 +22,7 @@ flavours:
 > Argentina's aromatic white, with perfumed floral notes and a dry palate.
 
 ## Where it's from
-Argentina. DNA work shows it is a cross of Muscat of Alexandria and Criolla Chica (Mission).
+Argentina has three distinct Torrontés varieties: Riojano, Sanjuanino and Mendocino. Torrontés Riojano, the best known and most highly regarded, is a natural cross of Muscat of Alexandria and Criolla Chica (Mission). Sanjuanino shares the same parents; ==Mendocino's parentage is less certain==
 
 ## Where it grows
 - **Salta and Cafayate, Argentina:** high-altitude vineyards give the freshest wines

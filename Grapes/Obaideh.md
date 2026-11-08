@@ -1,4 +1,5 @@
 ---
+needs-checking: true
 type: grape
 tags:
   - WiltshireWine
@@ -24,7 +25,7 @@ flavours:
 > A native Lebanese white, traditionally used in blends and in arak, now made into fresh, crisp table wines.
 
 ## Where it's from
-A local grape of Lebanon with a long history in the country. It has been said to be related to Chardonnay, though this is not well established.
+A local grape of Lebanon with a long history in the country. ==It has been said to be related to Chardonnay, though this is not well established.==
 
 ## Where it grows
 - **Bekaa Valley, Lebanon:** in blends and varietal wines

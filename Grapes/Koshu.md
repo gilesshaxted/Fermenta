@@ -22,7 +22,7 @@ flavours:
 > Japan's best known wine grape, making delicate dry whites.
 
 ## Where it's from
-Koshu has been grown in Yamanashi for a very long time and is thought to be a hybrid of Vitis vinifera with a wild Asian vine. It is Japan's flagship wine grape.
+Koshu has been grown in Yamanashi for a very long time and has predominantly Vitis vinifera ancestry, according to genetic research, with a significant contribution from wild East Asian grape species. It is Japan's flagship wine grape.
 
 ## Where it grows
 - **Yamanashi, Japan:** the heartland

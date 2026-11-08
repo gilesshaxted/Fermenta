@@ -1,0 +1,18 @@
+filters:
+  and:
+    - needs-checking == true
+properties:
+  file.name:
+    displayName: Note
+  type:
+    displayName: Type
+views:
+  - type: table
+    name: Needs checking
+    order:
+      - file.name
+      - type
+      - file.folder
+    sort:
+      - property: file.name
+        direction: ASC

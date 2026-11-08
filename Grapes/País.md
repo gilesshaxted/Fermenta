@@ -46,7 +46,7 @@ Brought by Spanish colonisers in the 16th century, where it is known as Mission 
 - Empanadas
 
 ## Good to know
-- Once only used for cheap wine.
+- Historically associated with high-volume everyday wines, it is now attracting renewed attention from producers working with old vines and more distinctive styles.
 - Serve slightly chilled.
 
 ## Wines I've tried

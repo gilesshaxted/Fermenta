@@ -5,6 +5,7 @@ tags:
 colour: white
 origin: "Spain"
 regions:
+  - "Ribera del Duero (Spain)"
   - "Canary Islands (Spain)"
 body: medium
 acidity: medium

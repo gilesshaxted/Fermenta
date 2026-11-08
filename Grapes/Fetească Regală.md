@@ -1,4 +1,5 @@
 ---
+needs-checking: true
 type: grape
 tags:
   - WiltshireWine
@@ -19,10 +20,10 @@ flavours:
 # Fetească Regală
 
 > [!abstract] At a glance
-> A fragrant, light Romanian white, a cross of Fetească Albă and Grasă.
+> A fragrant, light Romanian white, a natural crossing of native varieties.
 
 ## Where it's from
-Transylvania, created in the 1920s as a cross of two native grapes.
+A Romanian variety identified near Daneș in Transylvania in the early twentieth century. It is understood to be a natural crossing of native varieties, ==thought to be Fetească Albă and Grasă de Cotnari==
 
 ## Where it grows
 - **Transylvania, Romania:** the main home

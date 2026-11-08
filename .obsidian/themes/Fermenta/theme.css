@@ -2523,3 +2523,163 @@ body:is(.dr-compact-settings, .dr-compact-all) .modal.mod-settings .setting-item
   line-height: 1.3;
   margin-top: 1px;
 }
+/*===============================================================
+ * FERMENTA HOME PAGE
+ * Used by Home.md (cssclasses: fermenta-home).
+ *===============================================================*/
+
+.fermenta-home .fm-hero {
+  margin: 0 0 18px;
+  padding: 38px 28px 30px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--dr-frame-active), var(--dr-frame));
+  color: var(--dr-frame-text);
+  text-align: center;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.18);
+}
+.fermenta-home .fm-hero-title {
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: var(--dr-frame-text);
+}
+.fermenta-home .fm-hero-sub {
+  margin: 10px auto 20px;
+  max-width: 34em;
+  font-size: 1.1em;
+  opacity: 0.92;
+  color: var(--dr-frame-text);
+}
+.fermenta-home .fm-hero-search { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.fermenta-home a.fm-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgb(var(--ctp-accent));
+  color: rgb(var(--ctp-crust));
+  font-weight: 600;
+  text-decoration: none;
+}
+.fermenta-home a.fm-btn:hover { filter: brightness(1.08); color: rgb(var(--ctp-crust)); }
+.fermenta-home a.fm-btn-quiet {
+  background: transparent;
+  color: var(--dr-frame-text);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+.fermenta-home a.fm-btn-quiet:hover { color: var(--dr-frame-text); background: rgba(255, 255, 255, 0.1); }
+
+.fermenta-home .fm-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
+  margin: 0 0 8px;
+  text-align: center;
+}
+.fermenta-home .fm-stats > div {
+  padding: 12px 6px;
+  border-radius: 12px;
+  background: rgb(var(--ctp-mantle));
+  border: 1px solid rgb(var(--ctp-surface1));
+}
+.fermenta-home .fm-stats strong { display: block; font-size: 1.6em; line-height: 1.1; color: rgb(var(--ctp-accent)); }
+.fermenta-home .fm-stats span { font-size: 0.85em; color: rgb(var(--ctp-subtext1)); }
+
+.fermenta-home .fm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin: 8px 0 16px;
+}
+.fermenta-home a.fm-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgb(var(--ctp-mantle));
+  border: 1px solid rgb(var(--ctp-surface1));
+  color: rgb(var(--ctp-text));
+  text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.fermenta-home a.fm-card:hover {
+  transform: translateY(-2px);
+  border-color: rgb(var(--ctp-accent));
+  color: rgb(var(--ctp-text));
+}
+.fermenta-home .fm-card .fm-ico { font-size: 1.9em; line-height: 1.2; }
+.fermenta-home .fm-card strong { font-size: 1.15em; color: rgb(var(--ctp-text)); }
+.fermenta-home .fm-card span:last-child { font-size: 0.9em; color: rgb(var(--ctp-subtext1)); }
+
+.fermenta-home .fm-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 14px; }
+.fermenta-home .fm-chips a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgb(var(--ctp-surface0));
+  border: 1px solid rgb(var(--ctp-surface1));
+  text-decoration: none;
+}
+.fermenta-home .fm-chips a:hover { border-color: rgb(var(--ctp-accent)); }
+
+/* ===== FERMENTA: NEEDS CONFIRMING MARKER ===== */
+/* ==text== in a note marks a claim that still needs confirming. Everything unmarked is treated as confident fact. */
+mark,
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight {
+  background: rgba(230, 170, 50, 0.22);
+  color: inherit;
+  border-bottom: 1px dotted rgb(214, 150, 30);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+mark::after,
+.markdown-rendered mark::after {
+  content: " ?";
+  font-size: 0.8em;
+  font-weight: 700;
+  color: rgb(214, 150, 30);
+}
+body.theme-light mark,
+body.theme-light .markdown-rendered mark,
+body.theme-light .cm-s-obsidian span.cm-highlight {
+  background: rgba(214, 150, 30, 0.2);
+  border-bottom-color: rgb(150, 98, 8);
+}
+body.theme-light mark::after,
+body.theme-light .markdown-rendered mark::after {
+  color: rgb(150, 98, 8);
+}
+
+/* ===== FERMENTA HOME: DATAVIEW SECTIONS ===== */
+.fermenta-home .fm-shuffle {
+  margin: 6px 0 14px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--ctp-accent));
+  background: transparent;
+  color: rgb(var(--ctp-accent));
+  cursor: pointer;
+  box-shadow: none;
+}
+.fermenta-home .fm-shuffle:hover { background: rgba(var(--ctp-accent), 0.12); }
+.fermenta-home .fm-quiz-card {
+  border: 1px solid rgba(var(--ctp-text), 0.18);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 4px;
+}
+.fermenta-home .fm-quiz-card ul { margin: 0 0 10px; padding-left: 18px; }
+.fermenta-home .fm-quiz-card summary { cursor: pointer; color: rgb(var(--ctp-accent)); font-weight: 600; }
+.fermenta-home .fm-quiz-card details a { display: inline-block; margin-top: 8px; font-size: 1.15em; font-weight: 600; }
+.fermenta-home .fm-two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.fermenta-home .fm-two h4 { margin: 0 0 8px; color: rgb(var(--ctp-accent)); font-size: 1em; }
+.fermenta-home .fm-bar { display: grid; grid-template-columns: 110px 1fr 34px; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.88em; }
+.fermenta-home .fm-bar-l { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fermenta-home .fm-bar-t { height: 10px; border-radius: 5px; background: rgba(var(--ctp-text), 0.1); overflow: hidden; }
+.fermenta-home .fm-bar-t i { display: block; height: 100%; border-radius: 5px; background: rgb(var(--ctp-accent)); }
+.fermenta-home .fm-bar-v { text-align: right; color: rgb(var(--ctp-subtext1)); }

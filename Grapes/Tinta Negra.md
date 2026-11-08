@@ -1,4 +1,5 @@
 ---
+needs-checking: true
 type: grape
 tags:
   - WiltshireWine
@@ -23,7 +24,7 @@ flavours:
 > The most planted grape on Madeira, used for the majority of everyday Madeira wine.
 
 ## Where it's from
-Probably a cross of Pinot Noir and Grenache. It is the main grape for most Madeira.
+The main grape for most Madeira. Its parentage is only partly known; ==it is probably of Spanish origin and related to Negramoll==
 
 ## Where it grows
 - **Madeira, Portugal:** across the island

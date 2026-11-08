@@ -1,4 +1,5 @@
 ---
+needs-checking: true
 type: grape
 tags:
   - WiltshireWine
@@ -19,20 +20,20 @@ flavours:
 # Aladasturi
 
 > [!abstract] At a glance
-> A Georgian red grape of the west, used in the semi-sweet Khvanchkara blend.
+> A light, fruity red grape of western Georgia, grown in Imereti and Racha-Lechkhumi.
 
 ## Where it's from
-A traditional red grape of Imereti and Racha, and part of the Khvanchkara blend with Mujuretuli.
+A traditional red grape of western Georgia, grown in Imereti and Racha-Lechkhumi. It makes light, fruity reds, ==sometimes in a semi-sweet style==. It is not one of the grapes of Khvanchkara, which is made from Aleksandrouli and Mujuretuli.
 
 ## Where it grows
-- **Racha-Lechkhumi, Georgia:** for Khvanchkara
-- **Imereti, Georgia:** also grown
+- **Racha-Lechkhumi, Georgia:** a traditional home
+- **Imereti, Georgia:** the other main home
 
 ## What it tastes like
 - Red berries, plum, spice and herbs
 
 ## Classic wines
-- Khvanchkara
+- Light, fruity reds of Imereti and Racha
 
 ## Pairs with
 - Dessert
@@ -40,7 +41,7 @@ A traditional red grape of Imereti and Racha, and part of the Khvanchkara blend 
 - Cheese
 
 ## Good to know
-- Khvanchkara is semi-sweet.
+- Often confused with Khvanchkara, which is a separate appellation made from other grapes.
 - Light and fruity.
 
 ## Wines I've tried

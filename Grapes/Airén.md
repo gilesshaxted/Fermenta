@@ -18,7 +18,7 @@ flavours:
 # Airén
 
 > [!abstract] At a glance
-> Spain's most planted white grape and once the most planted in the world, grown on the high plains of La Mancha.
+> Spain's most widely planted white grape, and historically one of the world's most extensively planted white varieties, grown on the high plains of La Mancha.
 
 ## Where it's from
 Native to central Spain, where it covers huge areas. It is drought-tolerant, and much was used for brandy.

@@ -50,7 +50,7 @@ Only wine from the Champagne region can use the name. The Montagne de Reims lean
 - Salty snacks
 
 ## Good to know
-- Blanc de Blancs is all Chardonnay and Blanc de Noirs is all black grapes.
+- Blanc de Blancs is made only from white grapes, and is mostly Chardonnay. Blanc de Noirs is made only from black grapes.
 - Brut is the most common dryness level.
 - Most houses blend many vintages for a consistent house style.
 

@@ -23,7 +23,7 @@ flavours:
 > A Sauvignon-like, aromatic white that thrives in England.
 
 ## Where it's from
-Created in 1933 in Germany from a cross including Riesling and Silvaner, and adopted widely in England.
+Bred in Germany in 1933 by crossing Silvaner and Riesling, followed by a further cross with Müller-Thurgau. It has been widely adopted in England.
 
 ## Where it grows
 - **England:** widely planted for still whites

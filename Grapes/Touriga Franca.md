@@ -1,4 +1,5 @@
 ---
+needs-checking: true
 type: grape
 tags:
   - WiltshireWine
@@ -22,7 +23,7 @@ flavours:
 > The most planted grape of the Douro, with floral and structured wines.
 
 ## Where it's from
-A Douro native thought to be a cross of Touriga Nacional and Mourisco Tinto. It is easier to grow than Touriga Nacional.
+A major Douro red variety, valued for reliable production, floral character and its contribution to Port and dry red blends. ==Its parentage is listed as Mourisco Tinto × Touriga Nacional in one variety catalogue==. It is easier to grow than Touriga Nacional.
 
 ## Where it grows
 - **Douro, Portugal:** for Port and dry reds

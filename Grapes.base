@@ -1,0 +1,69 @@
+filters:
+  and:
+    - type == "grape"
+properties:
+  note.colour:
+    displayName: Colour
+  note.origin:
+    displayName: Origin
+  note.body:
+    displayName: Body
+  note.acidity:
+    displayName: Acidity
+  note.tannin:
+    displayName: Tannin
+  note.flavours:
+    displayName: Flavours
+views:
+  - type: table
+    name: All Grapes
+    order:
+      - file.name
+      - colour
+      - body
+      - acidity
+      - tannin
+      - origin
+      - flavours
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Reds
+    filters:
+      and:
+        - colour == "red"
+    order:
+      - file.name
+      - body
+      - acidity
+      - tannin
+      - origin
+      - flavours
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Whites
+    filters:
+      and:
+        - colour == "white"
+    order:
+      - file.name
+      - body
+      - acidity
+      - origin
+      - flavours
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: cards
+    name: Grape Cards
+    order:
+      - file.name
+      - colour
+      - body
+      - flavours
+    sort:
+      - property: file.name
+        direction: ASC

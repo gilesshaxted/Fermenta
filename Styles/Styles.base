@@ -1,0 +1,43 @@
+filters:
+  and:
+    - type == "style"
+properties:
+  note.category:
+    displayName: Category
+  note.colour:
+    displayName: Colour
+  note.sweetness:
+    displayName: Sweetness
+  note.country:
+    displayName: Country
+  note.regions:
+    displayName: Regions
+  note.grapes:
+    displayName: Grapes
+views:
+  - type: table
+    name: By category
+    groupBy:
+      property: category
+      direction: ASC
+    order:
+      - file.name
+      - colour
+      - sweetness
+      - country
+      - regions
+      - grapes
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: All styles
+    order:
+      - file.name
+      - category
+      - colour
+      - sweetness
+      - grapes
+    sort:
+      - property: file.name
+        direction: ASC

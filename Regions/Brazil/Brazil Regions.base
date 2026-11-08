@@ -1,0 +1,45 @@
+filters:
+  and:
+    - type == "region"
+    - country == "Brazil"
+properties:
+  note.area:
+    displayName: Area
+  note.level:
+    displayName: Level
+  note.climate:
+    displayName: Climate
+  note.soils:
+    displayName: Soils
+  note.grapes:
+    displayName: Grapes
+views:
+  - type: map
+    name: Map
+    order:
+      - file.name
+      - area
+      - level
+      - climate
+      - soils
+      - grapes
+    coordinates: note.coordinates
+    center: -29.0, -52.0
+    defaultZoom: 5
+    minZoom: 3
+    maxZoom: 14
+    mapHeight: 600
+  - type: table
+    name: Table
+    groupBy:
+      property: area
+      direction: ASC
+    order:
+      - file.name
+      - level
+      - climate
+      - soils
+      - grapes
+    sort:
+      - property: file.name
+        direction: ASC

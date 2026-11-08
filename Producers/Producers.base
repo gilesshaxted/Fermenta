@@ -1,0 +1,36 @@
+filters:
+  and:
+    - type == "producer"
+properties:
+  note.country:
+    displayName: Country
+  note.category:
+    displayName: Type
+  note.regions:
+    displayName: Regions
+  note.grapes:
+    displayName: Grapes
+views:
+  - type: table
+    name: By country
+    groupBy:
+      property: country
+      direction: ASC
+    order:
+      - file.name
+      - category
+      - regions
+      - grapes
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: All producers
+    order:
+      - file.name
+      - country
+      - category
+      - regions
+    sort:
+      - property: file.name
+        direction: ASC

@@ -1,0 +1,14 @@
+filters:
+  and:
+    - file.hasTag("TastingNotes")
+views:
+  - type: table
+    name: All tastings
+    order:
+      - file.name
+      - date
+      - producer
+      - region
+      - grape
+      - shop
+      - quality

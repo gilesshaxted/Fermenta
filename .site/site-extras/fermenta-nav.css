@@ -1,0 +1,13 @@
+/* The Fermenta top bar, as added to the website's note pages (Home and Map have it in fermenta.css) */
+:root { --frame: #7A1F35; --frame-text: #F8EDE2; --frame-hover: #8A2B42; --nav-head: "Cormorant Garamond", Georgia, serif; --nav-body: "Space Grotesk", system-ui, sans-serif; }
+:root[saved-theme="dark"] { --frame: #4F1626; --frame-text: #F5E8DD; --frame-hover: #621D31; }
+.fm-top { background: var(--frame); color: var(--frame-text); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 6px rgba(0,0,0,.25); font-family: var(--nav-body); }
+.fm-top-in { max-width: 1120px; margin: 0 auto; padding: 0 18px; display: flex; align-items: center; gap: 6px; min-height: 52px; flex-wrap: wrap; }
+.fm-logo { font-family: var(--nav-head); font-size: 1.7rem; font-weight: 700; color: var(--frame-text) !important; margin-right: 14px; letter-spacing: .01em; background: none !important; text-decoration: none !important; }
+.fm-nav { display: flex; flex-wrap: wrap; gap: 2px; flex: 1; }
+.fm-nav a { color: var(--frame-text) !important; padding: 6px 11px; border-radius: 8px; font-size: .95rem; opacity: .92; background: none !important; text-decoration: none !important; }
+.fm-nav a:hover { background: var(--frame-hover) !important; opacity: 1; }
+.fm-nav a.on { background: rgba(255,255,255,.14) !important; opacity: 1; }
+.fm-toggle { background: transparent; border: 1px solid rgba(255,255,255,.35); color: var(--frame-text); border-radius: 999px; width: 36px; height: 36px; cursor: pointer; font-size: 1.05rem; }
+.fm-toggle:hover { background: var(--frame-hover); }
+@media (max-width: 700px) { .fm-nav { flex-wrap: nowrap; overflow-x: auto; order: 3; flex-basis: 100%; } .fm-top-in { padding-bottom: 6px; } }

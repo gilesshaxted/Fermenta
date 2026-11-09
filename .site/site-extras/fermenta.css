@@ -120,3 +120,5 @@ footer { border-top: 1px solid var(--line); margin-top: 50px; padding: 22px 0 40
   .side { border-right: 0; border-bottom: 1px solid var(--line); max-height: 40vh; }
   .bar { grid-template-columns: 90px 1fr 32px; }
 }
+
+html[saved-theme="dark"] .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.9) saturate(.7); }

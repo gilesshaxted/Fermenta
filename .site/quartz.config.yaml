@@ -2,7 +2,7 @@
 configuration:
   pageTitle: Fermenta
   pageTitleSuffix: ""
-  enableSPA: true
+  enableSPA: false
   enablePopovers: true
   analytics:
     provider: null

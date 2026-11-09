@@ -87,3 +87,21 @@ h1 {
 table th {
   color: var(--secondary);
 }
+
+// The Fermenta top bar replaces the thin band, and the page's own light/dark button
+body:has(.fm-top)::before { display: none; }
+body:has(.fm-top) .darkmode { display: none; }
+
+// Only useful information on the page: hide the raw properties panel (it just showed the tag)
+details.note-properties,
+.note-properties { display: none; }
+
+// A link to a page that is planned but not written yet
+.fm-planned {
+  color: var(--darkgray);
+  border-bottom: 1px dotted var(--gray);
+  cursor: help;
+}
+
+// The note's own first heading repeats the page title shown above it
+.markdown-rendered > h1:first-child { display: none; }

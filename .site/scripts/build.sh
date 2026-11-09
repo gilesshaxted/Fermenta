@@ -28,11 +28,13 @@ cp "$HERE/custom.scss" "$B/quartz/styles/custom.scss"
 rm -rf "$B/content" && mkdir -p "$B/content"
 (cd "$VAULT" && tar cf - --exclude=.git --exclude=.obsidian --exclude=.gitignore --exclude=.gitattributes --exclude=.site --exclude=.github .) | tar xf - -C "$B/content"
 
+python3 "$HERE/scripts/postprocess.py" prep "$B/content"
 (cd "$B" && npx quartz build)
+python3 "$HERE/scripts/postprocess.py" html "$B/public"
 
 # Home page, map page and their data, added on top of the built site
 python3 "$HERE/scripts/build_data.py" "$B/content" "$B/public/fermenta-data.json" "$B/public"
-cp -r "$HERE"/site-extras/{fermenta.css,common.js,home.js,index.html,map.html,map.js,vendor} "$B/public/"
+cp -r "$HERE"/site-extras/{fermenta.css,fermenta-nav.css,common.js,home.js,index.html,map.html,map.js,vendor} "$B/public/"
 rm -f "$B/public/CNAME"   # the custom domain is set in the GitHub Pages settings, not by a file
 echo
 echo "Built: $B/public"

@@ -3,16 +3,10 @@
   var esc = function (s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); };
   var norm = function (s) { return String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); };
   var map = L.map("map", { worldCopyJump: true, minZoom: 2, zoomControl: true }).setView([30, 10], 2);
-  var tiles = null;
-  function setTiles() {
-    var dark = document.documentElement.getAttribute("saved-theme") === "dark";
-    if (tiles) map.removeLayer(tiles);
-    tiles = L.tileLayer("https://{s}.basemaps.cartocdn.com/" + (dark ? "dark_all" : "rastertiles/voyager") + "/{z}/{x}/{y}{r}.png", {
-      attribution: "&copy; OpenStreetMap contributors &copy; CARTO", subdomains: "abcd", maxZoom: 18
-    }).addTo(map);
-  }
-  setTiles();
-  new MutationObserver(setTiles).observe(document.documentElement, { attributes: true, attributeFilter: ["saved-theme"] });
+  // OpenStreetMap tiles (no key needed). Dark mode darkens them with a CSS filter, see fermenta.css
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors", maxZoom: 19
+  }).addTo(map);
 
   var layer = L.layerGroup().addTo(map), regs = [], hidden = {};
   fetch(FM_BASE + "/fermenta-data.json").then(function (r) { return r.json(); }).then(function (d) {

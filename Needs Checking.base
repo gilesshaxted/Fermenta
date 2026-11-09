@@ -1,6 +1,6 @@
 filters:
   and:
-    - needs-checking == true
+    - note["needs-checking"] == true
 properties:
   file.name:
     displayName: Note

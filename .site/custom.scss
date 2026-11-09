@@ -1,0 +1,89 @@
+@use "./variables.scss" as *;
+
+// Fermenta: Claret styling to match the Obsidian vault
+
+// Burgundy band across the top of every page
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: #7a1f35;
+  z-index: 1000;
+}
+:root[saved-theme="dark"] body::before {
+  background: #4f1626;
+  box-shadow: 0 1px 0 #7a2238;
+}
+
+// Site title in the burgundy / gold of the theme
+.page-title,
+.page-title a {
+  font-family: var(--titleFont);
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--headerFont);
+}
+h1 {
+  color: #7f1d33;
+}
+:root[saved-theme="dark"] h1 {
+  color: #e3917f;
+}
+:root[saved-theme="dark"] h2 {
+  color: #ddbf74;
+}
+
+// "Needs confirming" highlight: amber tint, dotted underline and a small question mark
+.text-highlight {
+  border-bottom: 1px dotted #d6961e;
+  border-radius: 2px;
+  padding: 0 2px;
+  &::after {
+    content: " ?";
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #d6961e;
+  }
+}
+:root[saved-theme="light"] .text-highlight::after {
+  color: #96620a;
+}
+
+// Callouts: warm tones in place of the default blue
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"] {
+  --color: #b0305a;
+  --border: #b0305a44;
+  --bg: #b0305a12;
+}
+:root[saved-theme="dark"] .callout[data-callout="abstract"],
+:root[saved-theme="dark"] .callout[data-callout="summary"] {
+  --color: #d6bc78;
+  --border: #d6bc7844;
+  --bg: #d6bc7812;
+}
+.callout[data-callout="info"] {
+  --color: #7a5e18;
+  --border: #7a5e1844;
+  --bg: #7a5e1812;
+}
+:root[saved-theme="dark"] .callout[data-callout="info"] {
+  --color: #9dbbd6;
+  --border: #9dbbd644;
+  --bg: #9dbbd612;
+}
+
+// Tables from Bases: a softer header
+table th {
+  color: var(--secondary);
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wine region map · Fermenta</title>
+<link rel="icon" href="static/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="fermenta.css">
+<script src="common.js"></script>
+</head>
+<body data-active="Map">
+<div class="mapwrap">
+  <aside class="side">
+    <h1>Wine region map</h1>
+    <p>Every region in Fermenta. Click a dot to see the region and open its page.</p>
+    <label for="mq">Find a region or country</label>
+    <input id="mq" type="search" placeholder="e.g. Rioja, Georgia, Burgundy" autocomplete="off">
+    <label for="mc">Continent</label>
+    <select id="mc"><option value="">All continents</option></select>
+    <label for="ml">Detail</label>
+    <select id="ml"><option value="">Regions and sub-regions</option><option value="region">Regions only</option><option value="sub-region">Sub-regions only</option></select>
+    <div class="legend" id="legend"></div>
+    <div class="count" id="count"></div>
+  </aside>
+  <div id="map"></div>
+</div>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="map.js"></script>
+</body>
+</html>

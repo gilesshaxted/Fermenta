@@ -9,17 +9,23 @@
 .obsidian/themes/*
 !.obsidian/themes/Fermenta/
 
-# Plugins: only these two
+# Plugins: only these three
 .obsidian/plugins/*
 !.obsidian/plugins/maps/
 !.obsidian/plugins/explorer-sort/
+!.obsidian/plugins/omnisearch/
 
 # Never share plugin settings, except the explorer-sort folder order
 .obsidian/plugins/**/data.json
 !.obsidian/plugins/explorer-sort/data.json
 *.bak
+.obsidian/plugins/omnisearch/*.json
+!.obsidian/plugins/omnisearch/manifest.json
 
 # Personal and system files
 .trash/
 .DS_Store
 Thumbs.db
+
+# Website build files
+.site/.build/

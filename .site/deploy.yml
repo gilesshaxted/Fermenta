@@ -1,0 +1,48 @@
+name: Build and publish the Fermenta website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Build the site
+        env:
+          # Set a repository variable called SITE_HOST (Settings > Secrets and variables > Actions > Variables)
+          # to move the site to a custom domain, for example fermenta.wiltshirewine.com
+          SITE_HOST: ${{ vars.SITE_HOST || 'gilesshaxted.github.io/Fermenta' }}
+          BUILD_DIR: ${{ runner.temp }}/fermenta-site
+        run: bash .site/scripts/build.sh .
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/fermenta-site/quartz/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

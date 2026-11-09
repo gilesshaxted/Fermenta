@@ -26,3 +26,7 @@ See `LICENSE.txt`.
 ## Optional: the live Home page
 
 `Home.md` uses the Dataview community plugin for its live counts, random picks, quiz and charts. Install **Dataview** from Settings > Community plugins, then turn on **Enable JavaScript queries** in its settings. Everything else in the vault works without it.
+
+## The website
+
+The notes are also published as a website, rebuilt automatically from this repo on every push. The files that build it live in the hidden `.site` folder and `.github/workflows`. You can ignore them when writing notes.

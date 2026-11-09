@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fermenta: a free, linked wine reference</title>
+<meta name="description" content="Grapes, regions, styles, producers and where to buy wine in the UK, all linked together.">
+<link rel="icon" href="static/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fermenta.css">
+<script src="common.js"></script>
+</head>
+<body data-active="">
+<div class="hero">
+  <h1>Fermenta</h1>
+  <p>A free, linked wine reference. Grapes, regions, styles, producers and where to buy.</p>
+  <div class="searchbox">
+    <span class="ico">🔍</span>
+    <input id="q" type="search" placeholder="Search a grape, region, producer or shop…" autocomplete="off" aria-label="Search Fermenta">
+    <div class="results" id="results" role="listbox"></div>
+  </div>
+  <div class="hint">Try “Nebbiolo”, “volcanic”, “Georgia” or “independent”. Press / to search.</div>
+</div>
+
+<div class="wrap">
+  <div class="stats" id="stats"></div>
+
+  <section>
+    <h2>Explore</h2>
+    <div class="grid six">
+      <a class="card" href="grapes/index.base"><span class="e">🍇</span><strong>Grapes</strong><span class="s">Where each grape grows, how it tastes and what it makes.</span></a>
+      <a class="card" href="regions/wine-regions.base"><span class="e">🗺️</span><strong>Regions</strong><span class="s">Countries and regions with climate, soils and key wines.</span></a>
+      <a class="card" href="map.html"><span class="e">📍</span><strong>Map</strong><span class="s">Every region on one interactive world map.</span></a>
+      <a class="card" href="styles/index.base"><span class="e">🥂</span><strong>Styles</strong><span class="s">Champagne, Port, Orange wine, Sherry and more.</span></a>
+      <a class="card" href="producers/index.base"><span class="e">🏡</span><strong>Producers</strong><span class="s">Major houses, notable growers and natural names.</span></a>
+      <a class="card" href="shops/index.base"><span class="e">🛒</span><strong>Shops</strong><span class="s">Where to buy in the UK, from supermarkets to independents.</span></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Discover something new</h2>
+    <p class="lede">A random grape, region, style, producer and shop each time you visit.</p>
+    <div class="grid" id="picks"></div>
+    <button class="btn" id="shuffle">🎲 Shuffle</button>
+  </section>
+
+  <section>
+    <h2>Name that grape</h2>
+    <p class="lede">Guess the grape from its clues, then reveal the answer and click through to read about it.</p>
+    <div class="quiz" id="quiz"></div>
+    <button class="btn" id="another">Another grape</button>
+  </section>
+
+  <section>
+    <h2>By the numbers</h2>
+    <div class="two" id="bars"></div>
+  </section>
+
+  <section>
+    <h2>Browse by continent</h2>
+    <div class="chips" id="continents"></div>
+  </section>
+
+  <section>
+    <h2>Good places to start</h2>
+    <div class="chips" id="starts"></div>
+  </section>
+
+  <section>
+    <h2>Help improve it</h2>
+    <div class="note">Everything here was written from general knowledge, so please check facts before you rely on them.
+    <mark>Highlighted text</mark> in a note is a claim that still needs confirming (<span id="ncount">0</span> notes so far, see the <a href="needs-checking.base">list</a>).
+    To add or fix something, see the <a href="https://github.com/gilesshaxted/Fermenta">GitHub page</a>.</div>
+  </section>
+</div>
+<footer><div class="wrap">Fermenta is an open wine reference by Wiltshire Wine. Built with <a href="https://quartz.jzhao.xyz">Quartz</a>.</div></footer>
+<script src="home.js"></script>
+</body>
+</html>

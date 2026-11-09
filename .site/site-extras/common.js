@@ -25,7 +25,7 @@
     var nav = LINKS.map(function (l) { return '<a href="' + l[1] + '"' + (l[0] === active ? ' class="on"' : "") + ">" + l[0] + "</a>"; }).join("");
     var bar = document.createElement("header");
     bar.className = "fm-top";
-    bar.innerHTML = '<div class="fm-top-in"><a class="fm-logo" href="' + (BASE || "") + '/">Fermenta</a><nav class="fm-nav">' + nav +
+    bar.innerHTML = '<div class="fm-top-in"><a class="fm-logo" href="' + (BASE || "") + '/"><svg viewBox="0 0 24 40" aria-hidden="true"><path fill="currentColor" d="M10 1h4v4c0 1.2.6 2.2 1.4 3.1C17 9.9 18 11.8 18 14.5V36a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V14.5c0-2.7 1-4.6 2.6-6.4C9.4 7.2 10 6.2 10 5z"/><rect x="6" y="21" width="12" height="11" fill="#000" opacity=".28"/><rect x="10" y="1" width="4" height="3" fill="#000" opacity=".25"/></svg><span><b>Fermenta</b><small>The Wine Wiki</small></span></a><nav class="fm-nav">' + nav +
       '</nav><button class="fm-toggle" id="fm-toggle" title="Switch light or dark" aria-label="Switch light or dark">◐</button></div>';
     document.body.insertBefore(bar, document.body.firstChild);
     document.getElementById("fm-toggle").onclick = function () {

@@ -40,7 +40,14 @@ def page_dir(rel):
         return posixpath.dirname(rel)
     return posixpath.dirname(rel)
 
-def html(public):
+def html(public, data_json=None):
+    import json
+    regions = {}
+    if data_json and os.path.exists(data_json):
+        for r in json.load(open(data_json, encoding="utf-8")):
+            if r.get("t") == "region" and r.get("ll"):
+                regions[r["u"].strip("/").lower()] = r
+    maps = 0
     exists = set()
     for root, _, files in os.walk(public):
         for f in files:
@@ -69,20 +76,36 @@ def html(public):
             target = href.split("#")[0].split("?")[0]
             if not target:
                 return m.group(0)
-            if found(posixpath.normpath(posixpath.join(base, target))):
+            full = posixpath.normpath(posixpath.join(base, target))
+            if found(full):
                 return m.group(0)
+            # a bare country or continent name (e.g. "south-africa") lives under regions/
+            alt = "regions/" + posixpath.basename(full)
+            if found(alt):
+                return '<a href="%s" class="%s"%s>%s</a>' % (posixpath.relpath(alt, base or ".") , cls, rest, inner)
             planned += 1
             return '<span class="fm-planned" title="Not written yet. This page is planned, and you can help write it.">%s</span>' % inner
         s2 = A_TAG.sub(fix, s)
         depth = rel.count("/")
         up = "../" * depth
         tag = '<link rel="stylesheet" href="%sfermenta-nav.css"/><script src="%scommon.js" defer></script></head>' % (up, up)
+        reg = regions.get(rel[:-5].lower())
+        if reg and "fm-regmap" not in s2:
+            extra = '<link rel="stylesheet" href="%svendor/leaflet/leaflet.css"/><script src="%svendor/leaflet/leaflet.js" defer></script><script src="%sregionmap.js" defer></script>' % (up, up, up)
+            tag = tag.replace("</head>", extra + "</head>")
+            box = ('<div class="fm-regmap-wrap"><h2>Location</h2><div class="fm-regmap" data-ll="%s,%s" data-name="%s" data-country="%s"></div>'
+                   '<small>Hover the grey dots for other regions in %s. <a href="%smap.html">Open the full world map</a></small></div>') % (
+                   reg["ll"][0], reg["ll"][1], reg["n"].replace('"', "&quot;"), (reg.get("co") or "").replace('"', "&quot;"), reg.get("co") or "this country", up)
+            i = s2.rfind("</div></article>")
+            if i >= 0:
+                s2 = s2[:i] + box + s2[i:]
+                maps += 1
         if "fermenta-nav.css" not in s2:
             s2 = s2.replace("</head>", tag, 1)
             injected += 1
         if s2 != s:
             open(fp, "w", encoding="utf-8").write(s2)
-    print("html: top bar added to %d pages, %d unwritten links marked as planned" % (injected, planned))
+    print("html: top bar added to %d pages, %d maps added, %d unwritten links marked as planned" % (injected, maps, planned))
 
 if __name__ == "__main__":
-    {"prep": prep, "html": html}[sys.argv[1]](sys.argv[2])
+    {"prep": prep, "html": html}[sys.argv[1]](*sys.argv[2:])

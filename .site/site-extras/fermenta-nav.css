@@ -11,3 +11,18 @@
 .fm-toggle { background: transparent; border: 1px solid rgba(255,255,255,.35); color: var(--frame-text); border-radius: 999px; width: 36px; height: 36px; cursor: pointer; font-size: 1.05rem; }
 .fm-toggle:hover { background: var(--frame-hover); }
 @media (max-width: 700px) { .fm-nav { flex-wrap: nowrap; overflow-x: auto; order: 3; flex-basis: 100%; } .fm-top-in { padding-bottom: 6px; } }
+
+.fm-logo { display: inline-flex; align-items: center; gap: 9px; margin-right: 14px; }
+.fm-logo svg { width: 20px; height: 34px; flex: none; }
+.fm-logo b { display: block; font-family: var(--nav-head, var(--font-head)); font-size: 1.6rem; font-weight: 700; line-height: 1; letter-spacing: .01em; }
+.fm-logo small { display: block; font-family: var(--nav-body, var(--font-body)); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; opacity: .78; margin-top: 3px; }
+.fm-top-in { min-height: 60px !important; }
+/* Maps on note pages */
+.fm-regmap-wrap { margin-top: 1.5rem; }
+.fm-regmap { height: 320px; border-radius: 10px; border: 1px solid rgba(128,128,128,.4); overflow: hidden; background: #ddd; }
+.fm-regmap-wrap small { display: block; margin-top: 6px; opacity: .8; }
+.leaflet-tooltip.fm-lbl { background: transparent; border: 0; box-shadow: none; padding: 0; font: 600 12px "Space Grotesk", system-ui, sans-serif; color: #2a1a1e; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 5px #fff; }
+.leaflet-tooltip.fm-lbl::before { display: none; }
+:root[saved-theme="dark"] .leaflet-tooltip.fm-lbl { color: #f3e9de; text-shadow: 0 0 3px #000, 0 0 3px #000, 0 0 5px #000; }
+:root[saved-theme="dark"] .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.9) saturate(.7); }
+.leaflet-container a { text-decoration: none; }

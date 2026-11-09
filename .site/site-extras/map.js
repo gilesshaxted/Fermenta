@@ -35,13 +35,29 @@
       m.bindPopup('<div class="pop"><a class="pop-title" href="' + esc(FM_BASE + r.u) + '">' + esc(r.n) + "</a><small>" + esc(r.co || "") + (r.lv === "sub-region" ? " · sub-region" : "") + "</small>" +
         (r.cl ? "<small>" + esc(r.cl) + "</small>" : "") + (r.g && r.g.length ? '<div class="g">' + esc(r.g.slice(0, 5).join(", ")) + "</div>" : "") + "</div>");
       m.bindTooltip(r.n, { direction: "top" });
+      m._name = r.n; m._lab = false;
       m.addTo(layer); pts.push(r.ll); n++;
     });
+    labels();
     $("count").textContent = n + " region" + (n === 1 ? "" : "s") + " shown";
     if (pts.length && (fit || q || c)) {
       if (q || c) map.fitBounds(L.latLngBounds(pts).pad(0.2), { maxZoom: 9 });
       else map.setView([30, 10], 2);
     }
   }
+  // Zoomed in far enough, show each region's name beside its dot (only for dots on screen)
+  var LABEL_ZOOM = 7;
+  function labels() {
+    var show = map.getZoom() >= LABEL_ZOOM, b = map.getBounds().pad(0.1);
+    layer.eachLayer(function (m) {
+      var want = show && b.contains(m.getLatLng());
+      if (want === m._lab) return;
+      m.unbindTooltip();
+      if (want) m.bindTooltip(m._name, { permanent: true, direction: "right", offset: [6, 0], className: "fm-lbl" });
+      else m.bindTooltip(m._name, { direction: "top" });
+      m._lab = want;
+    });
+  }
+  map.on("zoomend moveend", labels);
   ["mq", "mc", "ml"].forEach(function (id) { $(id).addEventListener(id === "mq" ? "input" : "change", function () { draw(true); }); });
 })();

@@ -100,6 +100,8 @@ def html(public, data_json=None):
             if i >= 0:
                 s2 = s2[:i] + box + s2[i:]
                 maps += 1
+        if "fermenta-favicon.svg" not in s2:
+            s2 = re.sub(r'<link rel="icon"[^>]*>', '<link rel="icon" type="image/svg+xml" href="%sfermenta-favicon.svg"/><link rel="apple-touch-icon" href="%sapple-touch-icon.png"/>' % (up, up), s2, count=1)
         if "fermenta-nav.css" not in s2:
             s2 = s2.replace("</head>", tag, 1)
             injected += 1

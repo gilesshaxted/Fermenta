@@ -128,7 +128,7 @@ html[saved-theme="dark"] .leaflet-tile-pane { filter: invert(1) hue-rotate(180de
 html[saved-theme="dark"] .leaflet-tooltip.fm-lbl { color: #f3e9de; text-shadow: 0 0 3px #000, 0 0 3px #000, 0 0 5px #000; }
 
 .fm-logo { display: inline-flex; align-items: center; gap: 9px; margin-right: 14px; }
-.fm-logo svg { width: 20px; height: 34px; flex: none; }
+.fm-logo svg { width: 52px; height: 52px; flex: none; margin: -8px -6px -8px -8px; }
 .fm-logo b { display: block; font-family: var(--nav-head, var(--font-head)); font-size: 1.6rem; font-weight: 700; line-height: 1; letter-spacing: .01em; }
 .fm-logo small { display: block; font-family: var(--nav-body, var(--font-body)); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; opacity: .78; margin-top: 3px; }
 .fm-top-in { min-height: 60px !important; }
